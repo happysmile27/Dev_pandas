@@ -14,6 +14,9 @@ table_2 = pd.DataFrame({
                          'healthcare', 'baby clothes', 'gadgets']
 })
 
-z = pd.concat([table_1, table_2], join="outer", sort=False)
+# z = pd.concat([table_1, table_2], join="outer", sort=False)
 
-print(z[:7])
+# print(z[:7])
+
+temp_df = pd.merge(table_1, table_2, on="user_id", how="left")
+print(temp_df[temp_df["user_preferences"].isnull()])
