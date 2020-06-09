@@ -1,6 +1,8 @@
 import pandas as pd
 
 df = pd.read_csv("/Users/olhafedyshyn/DevRepublic/NobelPrizeWinners.csv")
+
+df.shape
 for col in df:
     print(col)
     print(type(col))
